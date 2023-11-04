@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real-time Data Update</title>
+    <script src="https://cdn.socket.io/4.3.2/socket.io.min.js"></script>
+    <script type="text/javascript">
+        var socket = io();
+
+        // Function to handle received data updates
+        socket.on('update', function (data) {
+            document.getElementById('data-display').innerHTML = data.data;
+        });
+    </script>
+</head>
+<body>
+    <h1>Real-time Data:</h1>
+    <div id="data-display">Waiting for data...</div>
+</body>
+</html>

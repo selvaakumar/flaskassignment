@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Book</title>
+</head>
+<body>
+    <h1>Edit Book</h1>
+    <form action="" method="POST">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" value="{{ book.title }}"><br><br>
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" value="{{ book.author }}"><br><br>
+        <button type="submit">Update Book</button>
+    </form>
+    <form action="/books/{{ book.id }}/delete" method="POST">
+        <button type="submit">Delete Book</button>
+    </form>
+    <a href="/books/{{ book.id }}">Back to book</a>
+</body>
+</html>

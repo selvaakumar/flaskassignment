@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notifications</title>
+    <script src="https://cdn.socket.io/4.3.2/socket.io.min.js"></script>
+    <script type="text/javascript">
+        var socket = io();
+
+        // Function to handle received notifications
+        socket.on('notification', function (notification) {
+            alert('New Notification: ' + notification);
+        });
+    </script>
+</head>
+<body>
+    <h1>Notifications</h1>
+</body>
+</html>
